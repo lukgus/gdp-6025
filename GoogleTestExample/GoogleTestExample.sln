@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTestExample", "GoogleTestExample\GoogleTestExample.vcxproj", "{642CC187-0889-40E3-B7BC-1C43B0A42BF7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0} = {63D455AE-F4F8-41A0-9BF2-405F5E0481A0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlackBoxTestLibrary", "BlackBoxTestLibrary\BlackBoxTestLibrary.vcxproj", "{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,14 @@ Global
 		{642CC187-0889-40E3-B7BC-1C43B0A42BF7}.Release|x64.Build.0 = Release|x64
 		{642CC187-0889-40E3-B7BC-1C43B0A42BF7}.Release|x86.ActiveCfg = Release|Win32
 		{642CC187-0889-40E3-B7BC-1C43B0A42BF7}.Release|x86.Build.0 = Release|Win32
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}.Debug|x64.ActiveCfg = Debug|x64
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}.Debug|x64.Build.0 = Debug|x64
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}.Debug|x86.ActiveCfg = Debug|Win32
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}.Debug|x86.Build.0 = Debug|Win32
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}.Release|x64.ActiveCfg = Release|x64
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}.Release|x64.Build.0 = Release|x64
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}.Release|x86.ActiveCfg = Release|Win32
+		{63D455AE-F4F8-41A0-9BF2-405F5E0481A0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

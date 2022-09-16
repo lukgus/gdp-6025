@@ -17,6 +17,8 @@
 #include <gtest/gtest.h>
 #include <iostream>
 
+#include <BlackBoxTest.h>
+
 int Factorial(int a) {
 	// 5! = 5 * 4 * 3 * 2 * 1
 	if (a == 1)
@@ -30,7 +32,18 @@ TEST(FactorialTests, Factorial) {
 	EXPECT_EQ(720, Factorial(6));
 	EXPECT_EQ(24, Factorial(4));
 }
+// 1 1 2 3 5 8 13 21
+TEST(FibonacciTests, Fib5) {
+	EXPECT_EQ(5, Fibonacci(5));
+}
 
+TEST(FibonacciTests, Fib8) {
+	EXPECT_EQ(21, Fibonacci(8));
+}
+
+TEST(FibonacciTests, FibNegativeOne) {
+	EXPECT_EQ(-1, Fibonacci(-1));
+}
 
 int main(int argc, char** argv) {
 	::testing::InitGoogleTest(&argc, argv);
