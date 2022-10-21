@@ -98,7 +98,9 @@ namespace IteratorExample
 	}
 }
 
-int main(int argc, char** argv) {
+int XMLExample()
+{
+
 	// Create a document object
 	pugi::xml_document bookstore;
 
@@ -120,8 +122,8 @@ int main(int argc, char** argv) {
 	// Parse through the tree of the XML Data using iterators
 	// <bookstore>
 	pugi::xml_node_iterator bookIt;
-	for (bookIt = books.begin(); 
-		bookIt != books.end(); 
+	for (bookIt = books.begin();
+		bookIt != books.end();
 		bookIt++)
 	{
 		pugi::xml_node bookNode = *bookIt;
@@ -148,5 +150,18 @@ int main(int argc, char** argv) {
 		}
 	}
 
+}
+
+class Vec {
+public:
+	int a;
+};
+
+bool operator==(const Vec& a, const Vec& b)
+{
+	return a == b;
+}
+
+int main(int argc, char** argv) {
 	return 0;
 }

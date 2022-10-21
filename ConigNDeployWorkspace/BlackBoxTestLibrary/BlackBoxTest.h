@@ -7,9 +7,27 @@
 #endif
 
 
+class Vec {
+public:
+	int a;
+};
+
 // Use extern "C" so C++ compiler does not mess with
 // the headers we defined
 extern "C"
 {
-	BLACKBOXTEST_API int Fibonacci(int v);
+	class BLACKBOXTEST_API MathLibrary
+	{
+	public:
+		MathLibrary(int type)
+			: m_Type(type) {
+		}
+		int Fibonacci(int v);
+
+		bool operator==(const MathLibrary& other) {
+			return m_Type == other.m_Type;
+		}
+	//private:
+		int m_Type;
+	};
 }

@@ -1,0 +1,1 @@
+MSBuild.exe E:\work\fanshawe\22F\config\gdp-6025\ConigNDeployWorkspace\MSBuildExample\ -t:ShipItWithDebug -property:Platform=x64 -property:Configuration=Debug

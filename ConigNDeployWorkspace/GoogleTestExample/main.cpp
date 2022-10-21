@@ -19,6 +19,8 @@
 
 #include <BlackBoxTest.h>
 
+MathLibrary math(1);
+
 int Factorial(int a) {
 	// 5! = 5 * 4 * 3 * 2 * 1
 	if (a == 1)
@@ -34,18 +36,34 @@ TEST(FactorialTests, Factorial) {
 }
 // 1 1 2 3 5 8 13 21
 TEST(FibonacciTests, Fib5) {
-	EXPECT_EQ(5, Fibonacci(5));
+	EXPECT_EQ(5, math.Fibonacci(5));
 }
 
 TEST(FibonacciTests, Fib8) {
-	EXPECT_EQ(21, Fibonacci(8));
+	EXPECT_EQ(21, math.Fibonacci(8));
 }
 
 TEST(FibonacciTests, FibNegativeOne) {
-	EXPECT_EQ(-1, Fibonacci(-1));
+	EXPECT_EQ(-1, math.Fibonacci(-1));
 }
 
 int main(int argc, char** argv) {
+
+	MathLibrary a(4);
+	MathLibrary b(5);
+	MathLibrary c(4);
+
+	if (a == c) {
+		printf("A == C!\n");
+	}
+	if (a == b) {
+		printf("A == B!\n");
+	}
+	if (b == c) {
+		printf("B == C!\n");
+	}
+
+
 	::testing::InitGoogleTest(&argc, argv);
 	int result = RUN_ALL_TESTS();
 

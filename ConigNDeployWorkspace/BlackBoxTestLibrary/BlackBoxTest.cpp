@@ -8,7 +8,8 @@
 // F(1) = 1
 
 // 1 1 2 3 5 8 13 21 34 ...
-int Fibonacci(int v) {
+
+int MathLibrary::Fibonacci(int v) {
 	if (v <= 0)
 		return -1;
 
